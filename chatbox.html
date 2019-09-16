@@ -75,7 +75,7 @@
 		<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
 		<button class="open-button" onclick="openForm()">Chat</button>
 		<div class="chat-popup" id="myForm">
-			<form action="/action_page.php" class="form-container">
+			<form method="post" class="form-container" action="connect.php">
 				<h1>Chat</h1>
 				<label for="msg"><b>Message</b></label>
 				<textarea placeholder="Type message.." name="msg" required></textarea>
@@ -92,12 +92,8 @@
 		}
 		var messages = {
 		"messages":[
-<<<<<<< HEAD
-		
-=======
 		{"author":"Bram", "content":"Dit is een experiment!", "id":1},
 		{"author":"Bram", "content":"Eens kijken wat jullie ervan maken. Succes!", "id":2}
->>>>>>> 5-cent
 		],
 		"time":1568022185.4264374
 		}
@@ -108,11 +104,7 @@
 		
 		function sendMessage(name, message) {
 		var new_id = messages["messages"][-1]["id"] + 1;
-<<<<<<< HEAD
 		messages["messages"].push({ "content": message,});
-=======
-		messages["messages"].push({"author": name, "content": message, "id": new_id});
->>>>>>> 5-cent
 		console.log("Message sent!");
 		}
 		</script>
